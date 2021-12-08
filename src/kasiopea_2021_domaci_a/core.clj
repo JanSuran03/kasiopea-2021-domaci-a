@@ -13,7 +13,7 @@
                                      (map read-string))]
                 [(read-string cost) split-coins])))))
 
-(defn -main [& args]
+(defn -main [& _args]
   (let [input (read-input)
         calculated (map (fn [[cost coins]]
                           (let [total-coins (apply + (map * coins coins-vals))]
